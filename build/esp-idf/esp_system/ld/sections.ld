@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: /media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_system/ld/sections.ld.in */
+/* Generated from: /media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_system/ld/sections.ld.in */
 
 /*
  * SPDX-FileCopyrightText: 2021 Espressif Systems (Shanghai) CO LTD

@@ -39,7 +39,6 @@ static void tusb_device_task(void *arg)
 #endif // CONFIG_TINYUSB_INIT_IN_DEFAULT_TASK
     while (1) { // RTOS forever loop
         tud_task();
-        vTaskDelay(10);
     }
 }
 

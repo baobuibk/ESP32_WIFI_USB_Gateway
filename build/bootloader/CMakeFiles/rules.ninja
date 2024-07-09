@@ -318,7 +318,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_main_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/dongkhoa/esp/esp-idf/components/bootloader/subproject -B"/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/bootloader"
+  command = /usr/bin/cmake --regenerate-during-build -S/home/dongkhoa/esp/esp-idf/components/bootloader/subproject -B"/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/bootloader"
   description = Re-running CMake...
   generator = 1
 

@@ -39,261 +39,261 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/xtensa/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/xtensa/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_ringbuf/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_ringbuf/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/efuse/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/efuse/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_timer/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_timer/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_mm/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_mm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/driver/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/driver/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_pm/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_pm/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/mbedtls/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/mbedtls/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_bootloader_format/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_bootloader_format/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_app_format/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_app_format/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/bootloader_support/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/bootloader_support/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/bootloader/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/bootloader/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esptool_py/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esptool_py/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/partition_table/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/partition_table/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_partition/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_partition/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/app_update/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/app_update/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/spi_flash/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/spi_flash/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/pthread/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/pthread/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_system/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_system/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_common/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_common/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_rom/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_rom/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/hal/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/hal/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/log/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/log/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/heap/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/heap/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/soc/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/soc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_hw_support/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_hw_support/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/freertos/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/freertos/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/newlib/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/newlib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/cxx/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/cxx/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/wear_levelling/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/wear_levelling/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/sdmmc/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/sdmmc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/vfs/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/vfs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/fatfs/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/fatfs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/console/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/console/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/SD_Card/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/SD_Card/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/FTP/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/FTP/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/lwip/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/lwip/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_event/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_event/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/nvs_flash/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/nvs_flash/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_phy/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_phy/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_netif_stack/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_netif_stack/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_netif/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_netif/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/wpa_supplicant/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/wpa_supplicant/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_coex/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_coex/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/esp_wifi/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/esp_wifi/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/nvs/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/nvs/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/wifi/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/wifi/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/espressif__tinyusb/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/espressif__tinyusb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/usb/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/usb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/espressif__esp_tinyusb/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/espressif__esp_tinyusb/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/espressif__mdns/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/espressif__mdns/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/main/cmake_install.cmake")
+  include("/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/main/cmake_install.cmake")
 endif()
 

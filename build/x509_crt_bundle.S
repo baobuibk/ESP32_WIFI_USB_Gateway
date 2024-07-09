@@ -1,4 +1,4 @@
-/* * Data converted from /media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

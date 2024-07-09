@@ -1,4 +1,4 @@
-# Install script for directory: /media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/managed_components/espressif__mdns
+# Install script for directory: /media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/managed_components/espressif__mdns
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

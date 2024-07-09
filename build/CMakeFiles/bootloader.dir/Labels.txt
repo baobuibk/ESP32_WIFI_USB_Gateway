@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/CMakeFiles/bootloader
-/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/CMakeFiles/bootloader.rule
-/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/CMakeFiles/bootloader-complete.rule
-/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-/media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/CMakeFiles/bootloader
+/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/CMakeFiles/bootloader.rule
+/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/CMakeFiles/bootloader-complete.rule
+/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

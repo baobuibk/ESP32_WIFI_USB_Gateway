@@ -1,4 +1,4 @@
-# Install script for directory: /media/dongkhoa/New Volume/USB_IOT/ESP32/USB_IOT_SDMMC/Drivers/nvs
+# Install script for directory: /media/dongkhoa/New Volume/ESP32_WIFI_USB_Gateway/Drivers/nvs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
