@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "tinyusb.h": "c",
+        "usb_descriptors.h": "c",
+        "tusb_msc_storage.h": "c"
+    }
+}

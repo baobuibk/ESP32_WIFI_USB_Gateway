@@ -1,0 +1,235 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x178c
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xcbc
+load:0x403cc700,len:0x2d9c
+entry 0x403c9914
+[0;32mI (27) boot: ESP-IDF v5.2.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jul  9 2024 10:14:09[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.2[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (38) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (79) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot:  3 storage          Unknown data     01 81 00110000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3c0b0020 size=26364h (156516) map[0m
+[0;32mI (135) esp_image: segment 1: paddr=0003638c vaddr=3fc98d00 size=04a98h ( 19096) load[0m
+[0;32mI (139) esp_image: segment 2: paddr=0003ae2c vaddr=40374000 size=051ech ( 20972) load[0m
+[0;32mI (145) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=a2724h (665380) map[0m
+[0;32mI (268) esp_image: segment 4: paddr=000e274c vaddr=403791ec size=0fa9ch ( 64156) load[0m
+[0;32mI (291) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (291) boot: Disabling RNG early entropy source...[0m
+[0;32mI (303) cpu_start: Multicore app[0m
+[0;32mI (312) cpu_start: Pro cpu start user code[0m
+[0;32mI (313) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (313) cpu_start: Application information:[0m
+[0;32mI (316) cpu_start: Project name:     USB_IOT[0m
+[0;32mI (321) cpu_start: App version:      8b18438-dirty[0m
+[0;32mI (326) cpu_start: Compile time:     Jul  9 2024 10:14:04[0m
+[0;32mI (332) cpu_start: ELF file SHA256:  08ce1cccc...[0m
+[0;32mI (337) cpu_start: ESP-IDF:          v5.2.2[0m
+[0;32mI (342) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (347) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (352) cpu_start: Chip rev:         v0.2[0m
+[0;32mI (357) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (364) heap_init: At 3FCA2548 len 000471C8 (284 KiB): RAM[0m
+[0;32mI (370) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (376) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (382) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (389) spi_flash: detected chip: gd[0m
+[0;32mI (393) spi_flash: flash io: dio[0m
+[0;32mI (397) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (404) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (411) main_task: Started on CPU0[0m
+[0;32mI (421) main_task: Calling app_main()[0m
+[0;32mI (451) pp: pp rom version: e7ae62f[0m
+[0;32mI (451) net80211: net80211 rom version: e7ae62f[0m
+I (461) wifi:wifi driver task: 3fcac80c, prio:23, stack:6656, core=0
+I (471) wifi:wifi firmware version: 3e0076f
+I (471) wifi:wifi certification version: v7.0
+I (471) wifi:config NVS flash: enabled
+I (471) wifi:config nano formating: disabled
+I (481) wifi:Init data frame dynamic rx buffer num: 32
+I (481) wifi:Init static rx mgmt buffer num: 5
+I (481) wifi:Init management short buffer num: 32
+I (491) wifi:Init dynamic tx buffer num: 32
+I (491) wifi:Init static tx FG buffer num: 2
+I (501) wifi:Init static rx buffer size: 1600
+I (501) wifi:Init static rx buffer num: 10
+I (501) wifi:Init dynamic rx buffer num: 32
+[0;32mI (511) wifi_init: rx ba win: 6[0m
+[0;32mI (511) wifi_init: tcpip mbox: 32[0m
+[0;32mI (521) wifi_init: udp mbox: 6[0m
+[0;32mI (521) wifi_init: tcp mbox: 6[0m
+[0;32mI (521) wifi_init: tcp tx win: 5760[0m
+[0;32mI (531) wifi_init: tcp rx win: 5760[0m
+[0;32mI (531) wifi_init: tcp mss: 1440[0m
+[0;32mI (541) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (541) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (551) phy_init: phy_version 670,b7bc9b9,Apr 30 2024,10:54:13[0m
+I (591) wifi:mode : sta (48:27:e2:d4:d7:b4)
+I (591) wifi:enable tsf
+I (601) wifi:flush txq
+I (601) wifi:stop sw txq
+I (601) wifi:lmac stop hw txq
+I (601) wifi:mode : sta (48:27:e2:d4:d7:b4)
+I (601) wifi:enable tsf
+[0;32mI (611) [wifi]: Wifi_init_station finished.[0m
+I (611) wifi:new:<9,0>, old:<1,0>, ap:<255,255>, sta:<9,0>, prof:1
+I (611) wifi:state: init -> auth (b0)
+I (621) wifi:state: auth -> assoc (0)
+I (621) wifi:state: assoc -> run (10)
+I (731) wifi:connected with ptn209b3, aid = 10, channel 9, BW20, bssid = e0:19:54:e9:f8:a3
+I (731) wifi:security: WPA2-PSK, phy: bgn, rssi: -58
+I (731) wifi:pm start, type: 1
+
+I (731) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (741) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (781) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3041) wifi:<ba-add>idx:0 (ifx:0, e0:19:54:e9:f8:a3), tid:0, ssn:0, winSize:64
+[0;32mI (3751) esp_netif_handlers: sta ip: 192.168.1.14, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3751) [wifi]: got ip:192.168.1.14[0m
+[0;32mI (3751) [wifi]: Connected to ap SSID:ptn209b3 password:ptn209b3@[0m
+[0;32mI (3761) MAIN: mdns hostname set to: [ftp-server][0m
+[0;32mI (3761) MAIN: Getting time over NTP.[0m
+[0;32mI (3761) MAIN: Initializing SNTP[0m
+[0;32mI (3771) MAIN: Your NTP Server is pool.ntp.org[0m
+[0;32mI (3771) MAIN: Waiting for system time to be set... (1/10)[0m
+[0;32mI (5781) MAIN: Waiting for system time to be set... (2/10)[0m
+I (7461) wifi:<ba-add>idx:1 (ifx:0, e0:19:54:e9:f8:a3), tid:6, ssn:2, winSize:64
+[0;32mI (7561) MAIN: Notification of a time synchronization event[0m
+[0;32mI (7781) MAIN: The local date/time is: Tue Jul  9 03:32:29 2024[0m
+[0;33mW (7781) MAIN: This server manages file timestamps in GMT.[0m
+[0;32mI (7781) MAIN: Initializing SDCard[0m
+[0;32mI (7781) gpio: GPIO[36]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7791) gpio: GPIO[35]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7801) gpio: GPIO[37]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7811) gpio: GPIO[38]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7821) gpio: GPIO[40]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (7831) gpio: GPIO[41]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (8181) gpio: GPIO[41]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+Name: SP02G
+Type: SDSC
+Speed: 4.00 MHz (limit: 4.00 MHz)
+Size: 1921MB
+CSD: ver=1, sector_size=512, capacity=3935232 read_bl_len=10
+SSR: bus_width=4
+[0;32mI (8191) MAIN: Mount storage...[0m
+[0;32mI (8201) [usb]: Storage mounted to application: Yes[0m
+[0;32mI (8201) MAIN: 
+ls command output:[0m
+System Volume Information
+TEST
+NIHAO.TXT
+NEW
+.Trash-1000
+FOO.TXT
+[0;32mI (8211) [usb]: USB MSC initialization[0m
+[0;32mI (8221) tusb_desc: 
+┌─────────────────────────────────┐
+│  USB Device Descriptor Summary  │
+├───────────────────┬─────────────┤
+│bDeviceClass       │ 239         │
+├───────────────────┼─────────────┤
+│bDeviceSubClass    │ 2           │
+├───────────────────┼─────────────┤
+│bDeviceProtocol    │ 1           │
+├───────────────────┼─────────────┤
+│bMaxPacketSize0    │ 64          │
+├───────────────────┼─────────────┤
+│idVendor           │ 0x303a      │
+├───────────────────┼─────────────┤
+│idProduct          │ 0x4002      │
+├───────────────────┼─────────────┤
+│bcdDevice          │ 0x100       │
+├───────────────────┼─────────────┤
+│iManufacturer      │ 0x1         │
+├───────────────────┼─────────────┤
+│iProduct           │ 0x2         │
+├───────────────────┼─────────────┤
+│iSerialNumber      │ 0x3         │
+├───────────────────┼─────────────┤
+│bNumConfigurations │ 0x1         │
+└───────────────────┴─────────────┘[0m
+[0;32mI (8381) TinyUSB: TinyUSB Driver installed[0m
+[0;32mI (8391) [usb]: USB MSC initialization DONE[0m
+[0;32mI (8391) [Ftp]: ftp_task start[0m
+[0;32mI (8401) [Ftp]: ftp_user:[esp32] ftp_pass:[esp32][0m
+[0;32mI (58981) [Ftp]: Client IP: 0x1601a8c0[0m
+[0;32mI (58981) [Ftp]: Server IP: 0x0e01a8c0[0m
+[0;32mI (58981) [Ftp]: Connected.[0m
+[0;32mI (58981) [Ftp]: Send reply: [220 ESP32 FTP Server][0m
+[0;32mI (59001) [Ftp]: Send reply: OK (22)[0m
+[0;32mI (59011) [Ftp]: CMD: AUTH[0m
+[0;32mI (59011) [Ftp]: Send reply: [504 not-supported][0m
+[0;32mI (59031) [Ftp]: Send reply: OK (19)[0m
+[0;32mI (59041) [Ftp]: CMD: AUTH[0m
+[0;32mI (59041) [Ftp]: Send reply: [504 not-supported][0m
+[0;32mI (59061) [Ftp]: Send reply: OK (19)[0m
+[0;32mI (61131) [Ftp]: CMD: USER[0m
+[0;32mI (61131) [Ftp]: Send reply: [331 ][0m
+[0;32mI (61151) [Ftp]: Send reply: OK (6)[0m
+[0;32mI (61161) [Ftp]: CMD: PASS[0m
+[0;32mI (61161) [Ftp]: Send reply: [230 ][0m
+[0;32mI (61181) [Ftp]: Send reply: OK (6)[0m
+[0;32mI (61191) [Ftp]: CMD: SYST[0m
+[0;32mI (61191) [Ftp]: Send reply: [215 UNIX Type: L8][0m
+[0;32mI (61211) [Ftp]: Send reply: OK (19)[0m
+[0;32mI (61221) [Ftp]: CMD: FEAT[0m
+[0;32mI (61221) [Ftp]: Send reply: [502 no-features][0m
+[0;32mI (61241) [Ftp]: Send reply: OK (17)[0m
+[0;32mI (61251) [Ftp]: CMD: PWD[0m
+[0;32mI (61251) [Ftp]: Send reply: [257 /][0m
+[0;32mI (61271) [Ftp]: Send reply: OK (7)[0m
+[0;32mI (61281) [Ftp]: CMD: TYPE[0m
+[0;32mI (61281) [Ftp]: Send reply: [200 ][0m
+[0;32mI (61301) [Ftp]: Send reply: OK (6)[0m
+[0;32mI (61311) [Ftp]: CMD: PASV[0m
+[0;32mI (61311) [Ftp]: Data socket created[0m
+[0;32mI (61311) [Ftp]: Send reply: [227 (192,168,1,14,7,232)][0m
+[0;32mI (61331) [Ftp]: Send reply: OK (26)[0m
+[0;32mI (61341) [Ftp]: Data socket connected[0m
+[0;32mI (61351) [Ftp]: CMD: LIST[0m
+[0;32mI (61351) [Ftp]: open_child: / + [0m
+[0;32mI (61351) [Ftp]: open_child, New pwd: /[0m
+[0;32mI (61351) [Ftp]: ftp_open_dir_for_listing path=[/] MOUNT_POINT=[/data][0m
+[0;32mI (61351) [Ftp]: ftp_open_dir_for_listing: /data/[0m
+[0;32mI (61361) [Ftp]: Send reply: [150 ][0m
+[0;32mI (61381) [Ftp]: Send reply: OK (6)[0m
+[0;32mI (61381) [Ftp]: remove_fname_from_path: / - [0m
+[0;32mI (61391) [Ftp]: readdir de=0x3fcd34e8[0m
+[0;32mI (61391) [Ftp]: Add to dir list: System Volume Information[0m
+[0;32mI (61391) [Ftp]: ftp_get_eplf_item res=0 buf.st_size=0[0m
+[0;32mI (61391) [Ftp]: readdir de=0x3fcd34e8[0m
+[0;32mI (61401) [Ftp]: Add to dir list: TEST[0m
+[0;32mI (61401) [Ftp]: ftp_get_eplf_item res=0 buf.st_size=0[0m
+[0;32mI (61411) [Ftp]: readdir de=0x3fcd34e8[0m
+[0;32mI (61411) [Ftp]: Add to dir list: NIHAO.TXT[0m
+[0;32mI (61421) [Ftp]: ftp_get_eplf_item res=0 buf.st_size=13[0m
+[0;32mI (61421) [Ftp]: readdir de=0x3fcd34e8[0m
+[0;32mI (61431) [Ftp]: Add to dir list: NEW[0m
+[0;32mI (61431) [Ftp]: ftp_get_eplf_item res=0 buf.st_size=0[0m
+[0;32mI (61441) [Ftp]: readdir de=0x3fcd34e8[0m
+[0;32mI (61441) [Ftp]: Add to dir list: .Trash-1000[0m
+[0;32mI (61451) [Ftp]: ftp_get_eplf_item res=0 buf.st_size=0[0m
+[0;32mI (61451) [Ftp]: readdir de=0x3fcd34e8[0m
+[0;32mI (61451) [Ftp]: Add to dir list: FOO.TXT[0m
+[0;32mI (61461) [Ftp]: ftp_get_eplf_item res=0 buf.st_size=13[0m
+[0;32mI (61471) [Ftp]: readdir de=0x0[0m
+[0;32mI (61471) [Ftp]: Send list data: (362)[0m
+[0;32mI (61491) [Ftp]: Send OK[0m
+[0;32mI (61491) [Ftp]: Send reply: [226 ][0m
+[0;32mI (61511) [Ftp]: Send reply: OK (6)[0m
+[0;32mI (61521) [Ftp]: Data socket disconnected[0m
+[0;32mI (85921) [usb]: Storage mounted to application: No[0m
