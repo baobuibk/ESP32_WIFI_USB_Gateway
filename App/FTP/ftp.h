@@ -64,8 +64,8 @@ extern "C"
 typedef enum 
 {
     E_FTP_STE_DISABLED = 0,
-    E_FTP_STE_START,
-    E_FTP_STE_READY,
+    E_FTP_STE_START, // 1
+    E_FTP_STE_READY, // 2
     E_FTP_STE_END_TRANSFER,
     E_FTP_STE_CONTINUE_LISTING,
     E_FTP_STE_CONTINUE_FILE_TX,
@@ -111,7 +111,7 @@ typedef struct
 {
     uint8_t         *dBuffer;
     uint32_t        ctimeout;
-    union 
+    struct 
     {
         DIR         *dp;
         FILE        *fp;
@@ -144,31 +144,31 @@ typedef enum
 {
     E_FTP_CMD_NOT_SUPPORTED = -1,
     E_FTP_CMD_FEAT = 0,
-    E_FTP_CMD_SYST,
-    E_FTP_CMD_CDUP,
-    E_FTP_CMD_CWD,
-    E_FTP_CMD_PWD,
-    E_FTP_CMD_XPWD,
-    E_FTP_CMD_SIZE,
-    E_FTP_CMD_MDTM,
-    E_FTP_CMD_TYPE,
-    E_FTP_CMD_USER,
-    E_FTP_CMD_PASS,
-    E_FTP_CMD_PASV,
-    E_FTP_CMD_LIST,
-    E_FTP_CMD_RETR,
-    E_FTP_CMD_STOR,
-    E_FTP_CMD_DELE,
-    E_FTP_CMD_RMD,
-    E_FTP_CMD_MKD,
-    E_FTP_CMD_RNFR,
-    E_FTP_CMD_RNTO,
-    E_FTP_CMD_NOOP,
-    E_FTP_CMD_QUIT,
-    E_FTP_CMD_APPE,
-    E_FTP_CMD_NLST,
-    E_FTP_CMD_AUTH,
-    E_FTP_NUM_FTP_CMDS
+    E_FTP_CMD_SYST, // 1
+    E_FTP_CMD_CDUP, // 2
+    E_FTP_CMD_CWD, // 3
+    E_FTP_CMD_PWD,  // 4
+    E_FTP_CMD_XPWD, //5
+    E_FTP_CMD_SIZE, // 6
+    E_FTP_CMD_MDTM, // 7
+    E_FTP_CMD_TYPE, // 8
+    E_FTP_CMD_USER, // 9
+    E_FTP_CMD_PASS, // 10
+    E_FTP_CMD_PASV, // 11
+    E_FTP_CMD_LIST, // 12
+    E_FTP_CMD_RETR, // 13
+    E_FTP_CMD_STOR, // 14
+    E_FTP_CMD_DELE, // 15
+    E_FTP_CMD_RMD,  // 16
+    E_FTP_CMD_MKD,  // 17
+    E_FTP_CMD_RNFR, // 18
+    E_FTP_CMD_RNTO, // 19
+    E_FTP_CMD_NOOP, // 20
+    E_FTP_CMD_QUIT, // 21
+    E_FTP_CMD_APPE, // 22
+    E_FTP_CMD_NLST, // 23
+    E_FTP_CMD_AUTH, // 24
+    E_FTP_NUM_FTP_CMDS // 25
 } ftp_cmd_index_t;
 
 

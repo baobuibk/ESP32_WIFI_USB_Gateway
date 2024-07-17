@@ -91,12 +91,13 @@ esp_err_t tinyusb_driver_install(const tinyusb_config_t *config)
     }
 
     tinyusb_set_descriptor(dev_descriptor, string_descriptor, string_descriptor_count, cfg_descriptor);
-#if !CONFIG_TINYUSB_INIT_IN_DEFAULT_TASK
-    ESP_RETURN_ON_FALSE(tusb_init(), ESP_FAIL, TAG, "Init TinyUSB stack failed");
-#endif
-#if !CONFIG_TINYUSB_NO_DEFAULT_TASK
-    ESP_RETURN_ON_ERROR(tusb_run_task(), TAG, "Run TinyUSB task failed");
-#endif
+    tusb_init();
+// #if !CONFIG_TINYUSB_INIT_IN_DEFAULT_TASK
+//     ESP_RETURN_ON_FALSE(tusb_init(), ESP_FAIL, TAG, "Init TinyUSB stack failed");
+// #endif
+// #if !CONFIG_TINYUSB_NO_DEFAULT_TASK
+//     ESP_RETURN_ON_ERROR(tusb_run_task(), TAG, "Run TinyUSB task failed");
+// #endif
     ESP_LOGI(TAG, "TinyUSB Driver installed");
     return ESP_OK;
 }

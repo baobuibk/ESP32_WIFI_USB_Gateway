@@ -24,8 +24,6 @@ extern const char *MOUNT_POINT;
  *   PUBLIC FUNCTIONS
  **********************/
 
-// esp_err_t mountSDCARD(char *mount_point, sdmmc_card_t *card);
-
 #ifdef __cplusplus
 }
 #endif

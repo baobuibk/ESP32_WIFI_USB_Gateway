@@ -13,6 +13,7 @@
 
 #include "ftp.h"
 #include "sd_card.h"
+#include "tusb_msc_storage.h"
 
 /***********************************
  *      DEFINES
@@ -26,6 +27,8 @@
 
 char ftp_user[FTP_USER_PASS_LEN_MAX + 1];
 char ftp_pass[FTP_USER_PASS_LEN_MAX + 1];
+
+extern SemaphoreHandle_t sem_sd_card;
 
 /***********************************
  *   PRIVATE DATA
@@ -205,13 +208,18 @@ void ftp_deinit(void)
  */
 int ftp_run (uint32_t elapsed)
 {
-	//if (xSemaphoreTake(ftp_mutex, FTP_MUTEX_TIMEOUT_MS / portTICK_PERIOD_MS) !=pdTRUE) return -1;
+    BaseType_t ret_mutex = pdFALSE;
 	if (ftp_stop) return -2;
 
 	ftp_data.dtimeout += elapsed;
 	ftp_data.ctimeout += elapsed;
 	ftp_data.time += elapsed;
 
+    if ((ftp_data.state != E_FTP_STE_READY))
+    {
+        tinyusb_msc_storage_mount(MOUNT_POINT);
+    }
+    
 	switch (ftp_data.state) {
 		case E_FTP_STE_DISABLED:
 			ftp_wait_for_enabled();
@@ -288,45 +296,43 @@ int ftp_run (uint32_t elapsed)
 			}
 			break;
 		case E_FTP_STE_CONTINUE_FILE_RX:
-			{
-				int32_t len;
-				ftp_result_t result = E_FTP_RESULT_OK;
+            int32_t len;
+            ftp_result_t result = E_FTP_RESULT_OK;
 
-				ESP_LOGI(FTP_TAG, "ftp_buff_size=%d", ftp_buff_size);
-				result = ftp_recv_non_blocking(ftp_data.d_sd, ftp_data.dBuffer, ftp_buff_size, &len);
-				if (result == E_FTP_RESULT_OK) {
-					// block of data received
-					ftp_data.dtimeout = 0;
-					ftp_data.ctimeout = 0;
-					// save received data to file
-					if (E_FTP_RESULT_OK != ftp_write_file ((char *)ftp_data.dBuffer, len)) {
-						ftp_send_reply(451, NULL);
-						ftp_data.state = E_FTP_STE_END_TRANSFER;
-						ESP_LOGW(FTP_TAG, "Error writing to file");
-					}
-					else {
-						ftp_data.total += len;
-						ESP_LOGI(FTP_TAG, "Received %"PRIu32", total: %"PRIu32, len, ftp_data.total);
-					}
-				}
-				else if (result == E_FTP_RESULT_CONTINUE) {
-					// nothing received
-					if (ftp_data.dtimeout > FTP_DATA_TIMEOUT_MS) {
-						ftp_close_files_dir();
-						ftp_send_reply(426, NULL);
-						ftp_data.state = E_FTP_STE_END_TRANSFER;
-						ESP_LOGW(FTP_TAG, "Receiving to file timeout");
-					}
-				}
-				else {
-					// File received (E_FTP_RESULT_FAILED)
-					ftp_close_files_dir();
-					ftp_send_reply(226, NULL);
-					ftp_data.state = E_FTP_STE_END_TRANSFER;
-					ESP_LOGI(FTP_TAG, "File received (%"PRIu32" bytes in %"PRIu32" msec).", ftp_data.total, ftp_data.time);
-					break;
-				}
-			}
+            ESP_LOGI(FTP_TAG, "ftp_buff_size=%d", ftp_buff_size);
+            result = ftp_recv_non_blocking(ftp_data.d_sd, ftp_data.dBuffer, ftp_buff_size, &len);
+            if (result == E_FTP_RESULT_OK) {
+                // block of data received
+                ftp_data.dtimeout = 0;
+                ftp_data.ctimeout = 0;
+                // save received data to file
+                if (E_FTP_RESULT_OK != ftp_write_file ((char *)ftp_data.dBuffer, len)) {
+                    ftp_send_reply(451, NULL);
+                    ftp_data.state = E_FTP_STE_END_TRANSFER;
+                    ESP_LOGW(FTP_TAG, "Error writing to file");
+                }
+                else {
+                    ftp_data.total += len;
+                    ESP_LOGI(FTP_TAG, "Received %"PRIu32", total: %"PRIu32, len, ftp_data.total);
+                }
+            }
+            else if (result == E_FTP_RESULT_CONTINUE) {
+                // nothing received
+                if (ftp_data.dtimeout > FTP_DATA_TIMEOUT_MS) {
+                    ftp_close_files_dir();
+                    ftp_send_reply(426, NULL);
+                    ftp_data.state = E_FTP_STE_END_TRANSFER;
+                    ESP_LOGW(FTP_TAG, "Receiving to file timeout");
+                }
+            }
+            else {
+                // File received (E_FTP_RESULT_FAILED)
+                ftp_close_files_dir();
+                ftp_send_reply(226, NULL);
+                ftp_data.state = E_FTP_STE_END_TRANSFER;
+                ESP_LOGI(FTP_TAG, "File received (%"PRIu32" bytes in %"PRIu32" msec).", ftp_data.total, ftp_data.time);
+                break;
+            }
 			break;
 		default:
 			break;
@@ -372,6 +378,11 @@ int ftp_run (uint32_t elapsed)
 		ftp_data.state = E_FTP_STE_READY;
 		ESP_LOGI(FTP_TAG, "Data socket disconnected");
 	}
+
+    if ((ftp_data.state != E_FTP_STE_READY))
+    {
+        tinyusb_msc_storage_unmount();
+    }
 
 	//xSemaphoreGive(ftp_mutex);
 	return 0;
@@ -697,7 +708,6 @@ static int ftp_get_eplf_item (char *dest, uint32_t destsize, struct dirent *de)
 	char fullname[128];
 	strcpy(fullname, MOUNT_POINT);
 	strcat(fullname, ftp_path);
-	//strcpy(fullname, ftp_path);
 	if (fullname[strlen(fullname)-1] != '/') strcat(fullname, "/");
 	strcat(fullname, de->d_name);
 
@@ -773,6 +783,8 @@ static ftp_result_t ftp_list_dir(char *list, uint32_t maxlistsize,
     uint listcount = 0;
     ftp_result_t result = E_FTP_RESULT_CONTINUE;
     struct dirent *de;
+
+    ftp_open_dir_for_listing(ftp_path);
 
     // read up to 8 directory items
     while (((maxlistsize - next) > 64) && (listcount < 8))
@@ -1399,6 +1411,18 @@ static void ftp_process_cmd(void)
         strcpy(fullname, MOUNT_POINT);
         strcpy(fullname2, MOUNT_POINT);
 
+        printf("ftp cmd: %d\r\n", cmd);
+
+        if ((cmd == E_FTP_CMD_LIST) || 
+            (cmd == E_FTP_CMD_NLST) || 
+            (cmd == E_FTP_CMD_CWD) ||
+            (cmd ==E_FTP_CMD_RMD) ||
+            (cmd == E_FTP_CMD_DELE) ||
+            (cmd == E_FTP_CMD_STOR))
+        {
+            tinyusb_msc_storage_mount(MOUNT_POINT);
+        }
+        
         switch (cmd)
         {
         case E_FTP_CMD_FEAT:
@@ -1755,6 +1779,16 @@ static void ftp_process_cmd(void)
             // command not implemented
             ftp_send_reply(502, NULL);
             break;
+        }
+
+        if ((cmd == E_FTP_CMD_LIST) || 
+            (cmd == E_FTP_CMD_NLST) || 
+            (cmd == E_FTP_CMD_CWD) ||
+            (cmd ==E_FTP_CMD_RMD) ||
+            (cmd == E_FTP_CMD_DELE) ||
+            (cmd == E_FTP_CMD_STOR))
+        {
+            tinyusb_msc_storage_unmount();
         }
 
         if (ftp_data.closechild)

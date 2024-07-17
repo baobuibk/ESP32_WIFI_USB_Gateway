@@ -259,7 +259,10 @@ static inline usbd_class_driver_t const * get_driver(uint8_t drvid)
 #endif
 
   // Built-in drivers
-  if (drvid < BUILTIN_DRIVER_COUNT) return &_usbd_driver[drvid];
+  if (drvid < BUILTIN_DRIVER_COUNT)
+  {
+    return &_usbd_driver[drvid];
+  } 
 
 #ifdef __GNUC__
 #pragma GCC diagnostic pop
@@ -500,10 +503,9 @@ void tud_task_ext(uint32_t timeout_ms, bool in_isr)
     if (event.event_id == DCD_EVENT_SETUP_RECEIVED) TU_LOG(USBD_DBG, "\r\n"); // extra line for setup
     TU_LOG(USBD_DBG, "USBD %s ", event.event_id < DCD_EVENT_COUNT ? _usbd_event_str[event.event_id] : "CORRUPTED");
 #endif
-
     switch ( event.event_id )
     {
-      case DCD_EVENT_BUS_RESET:
+      case DCD_EVENT_BUS_RESET: // 1
         TU_LOG(USBD_DBG, ": %s Speed\r\n", tu_str_speed[event.bus_reset.speed]);
         usbd_reset(event.rhport);
         _usbd_dev.speed = event.bus_reset.speed;
@@ -517,7 +519,8 @@ void tud_task_ext(uint32_t timeout_ms, bool in_isr)
         if (tud_umount_cb) tud_umount_cb();
       break;
 
-      case DCD_EVENT_SETUP_RECEIVED:
+      case DCD_EVENT_SETUP_RECEIVED: //6
+      printf("DCD_EVENT_SETUP_RECEIVED\r\n");
         TU_LOG_PTR(USBD_DBG, &event.setup_received);
         TU_LOG(USBD_DBG, "\r\n");
 
@@ -541,8 +544,9 @@ void tud_task_ext(uint32_t timeout_ms, bool in_isr)
         }
       break;
 
-      case DCD_EVENT_XFER_COMPLETE:
+      case DCD_EVENT_XFER_COMPLETE: // 7
       {
+        // printf("DCD_EVENT_XFER_COMPLETE\r\n");
         // Invoke the class callback associated with the endpoint address
         uint8_t const ep_addr = event.xfer_complete.ep_addr;
         uint8_t const epnum   = tu_edpt_number(ep_addr);
@@ -557,6 +561,7 @@ void tud_task_ext(uint32_t timeout_ms, bool in_isr)
         {
           usbd_control_xfer_cb(event.rhport, ep_addr, (xfer_result_t) event.xfer_complete.result, event.xfer_complete
           .len);
+          
         }
         else
         {
@@ -570,6 +575,7 @@ void tud_task_ext(uint32_t timeout_ms, bool in_isr)
       break;
 
       case DCD_EVENT_SUSPEND:
+      printf("DCD_EVENT_SUSPEND\r\n");
         // NOTE: When plugging/unplugging device, the D+/D- state are unstable and
         // can accidentally meet the SUSPEND condition ( Bus Idle for 3ms ), which result in a series of event
         // e.g suspend -> resume -> unplug/plug. Skip suspend/resume if not connected
@@ -584,6 +590,7 @@ void tud_task_ext(uint32_t timeout_ms, bool in_isr)
       break;
 
       case DCD_EVENT_RESUME:
+      printf("DCD_EVENT_RESUME\r\n");
         if ( _usbd_dev.connected )
         {
           TU_LOG(USBD_DBG, "\r\n");
@@ -595,6 +602,7 @@ void tud_task_ext(uint32_t timeout_ms, bool in_isr)
       break;
 
       case USBD_EVENT_FUNC_CALL:
+      printf("USBD_EVENT_FUNC_CALL\r\n");
         TU_LOG(USBD_DBG, "\r\n");
         if ( event.func_call.func ) event.func_call.func(event.func_call.param);
       break;

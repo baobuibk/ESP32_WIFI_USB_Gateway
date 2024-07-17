@@ -4,9 +4,11 @@
 # CMakeLists in this exact order for cmake to work correctly
 cmake_minimum_required(VERSION 3.16)
 
-set(EXTRA_COMPONENT_DIRS ${CMAKE_CURRENT_LIST_DIR}/App ${CMAKE_CURRENT_LIST_DIR}/Drivers)
+set(EXTRA_COMPONENT_DIRS    ${CMAKE_CURRENT_LIST_DIR}/App 
+                            ${CMAKE_CURRENT_LIST_DIR}/Drivers
+                            ${CMAKE_CURRENT_LIST_DIR}/Components)
 
-set(COMPONENTS main)
+# set(COMPONENTS main)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(ESP32_WIFI_USB_Gateway)
+project(USB_IOT)

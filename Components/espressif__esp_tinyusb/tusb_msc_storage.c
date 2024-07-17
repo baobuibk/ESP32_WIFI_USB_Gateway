@@ -117,6 +117,7 @@ static esp_err_t _write_sector_spiflash(size_t sector_size,
 #if SOC_SDMMC_HOST_SUPPORTED
 static esp_err_t _mount_sdmmc(BYTE pdrv)
 {
+    printf("usb mount\r\n");
     ff_diskio_register_sdmmc(pdrv, s_storage_handle->card);
     ff_sdmmc_set_disk_status_check(pdrv, false);
     return ESP_OK;
@@ -124,6 +125,7 @@ static esp_err_t _mount_sdmmc(BYTE pdrv)
 
 static esp_err_t _unmount_sdmmc(void)
 {
+    printf("usb unmount\r\n");
     BYTE pdrv;
     pdrv = ff_diskio_get_pdrv_card(s_storage_handle->card);
     if (pdrv == 0xff) {

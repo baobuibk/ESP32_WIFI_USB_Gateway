@@ -293,7 +293,7 @@
 
 // Debug enable to print out error message
 #ifndef CFG_TUSB_DEBUG
-  #define CFG_TUSB_DEBUG 0
+  #define CFG_TUSB_DEBUG 2
 #endif
 
 // TODO MEM_SECTION can be different for host and device controller

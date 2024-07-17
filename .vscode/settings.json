@@ -2,6 +2,11 @@
     "files.associations": {
         "tinyusb.h": "c",
         "usb_descriptors.h": "c",
-        "tusb_msc_storage.h": "c"
+        "tusb_msc_storage.h": "c",
+        "sd_card.h": "c",
+        "tusb_private.h": "c",
+        "dcd.h": "c",
+        "random": "c",
+        "limits": "c"
     }
 }
